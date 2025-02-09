@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dynamic Blog Index - Nickelodeon Inspired</title>
+  <!-- Link to the new CSS file -->
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Blog Posts</h2>
+    <ul id="post-list">
+      <li>Loading posts...</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to fetch and list HTML files from the docs folder -->
+  <script>
+    // GitHub account details:
+    const owner = 'mikeisstrong';
+    const repo = 'SportBlog';
+    const path = 'docs'; // Folder holding your HTML files
+    const branch = 'main'; // Your default branch
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const postList = document.getElementById('post-list');
+        postList.innerHTML = ''; // Clear the "Loading posts..." text
+
+        // Filter the results to include only HTML files (excluding index.html)
+        const htmlFiles = data.filter(item =>
+          item.type === 'file' &&
+          item.name.endsWith('.html') &&
+          item.name.toLowerCase() !== 'index.html'
+        );
+
+        if (htmlFiles.length === 0) {
+          postList.innerHTML = '<li>No blog posts found.</li>';
+        } else {
+          // Optional: sort files by name
+          htmlFiles.sort((a, b) => a.name.localeCompare(b.name));
+          // Create a list item for each HTML file
+          htmlFiles.forEach(file => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            // Use the file name as the relative URL (adjust if needed based on your deployment)
+            a.href = file.name;
+            a.textContent = file.name;
+            li.appendChild(a);
+            postList.appendChild(li);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching repository contents:', error);
+        document.getElementById('post-list').innerHTML =
+          `<li>Error loading posts: ${error.message}</li>`;
+      });
+  </script>
+</body>
+</html>
