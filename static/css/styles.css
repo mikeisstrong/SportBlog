@@ -1,0 +1,120 @@
+/* Import Google Fonts for a retro, friendly look */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+  background-color: #f5f5f5; /* Soft, neutral background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #e74c3c, #f39c12); /* Warm red-to-orange gradient */
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #8e44ad; /* Subtle shadow in a contrasting hue */
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+/* Main Content Area */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #bdc3c7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+main h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+/* Blog Post List Styling */
+#post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#post-list li {
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  border: 2px solid #bdc3c7;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#post-list li:hover {
+  background: linear-gradient(135deg, #f9f9f9, #fff);
+  transform: translateY(-3px);
+  border-color: #e74c3c;
+}
+
+#post-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+#post-list li a:hover {
+  color: #e74c3c;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #e74c3c, #f39c12);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
