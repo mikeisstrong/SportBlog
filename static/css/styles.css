@@ -1,0 +1,85 @@
+/* styles.css - Late 90s Sports Website Look */
+
+/* Overall page styles */
+body {
+    background-color: #C0C0C0; /* Silver background reminiscent of late 90s web design */
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+/* Header styling */
+#header {
+    background-color: #003366; /* Dark blue header */
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700; /* Gold border for a flashy accent */
+}
+
+#header h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 12em;
+    margin: 0;
+}
+
+/* Navigation bar styling */
+#nav {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+#nav a {
+    color: #FFD700; /* Gold links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content container */
+#content {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #FFF;
+    padding: 10px;
+    border: 2px solid #003366;
+}
+
+/* Game details section */
+#games {
+    margin-bottom: 20px;
+}
+
+.game {
+    border: 1px solid #003366;
+    background-color: #E6E6FA; /* Light lavender for a retro feel */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.game h2 {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    font-size: 11.2em;
+    color: #003366;
+}
+
+/* Blog section styling */
+#blog {
+    border-top: 2px dashed #003366;
+    padding-top: 10px;
+}
+
+/* Footer styling */
+#footer {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 0.8em;
+    padding: 10px;
+    background-color: #003366;
+    color: #FFD700;
+}
