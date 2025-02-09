@@ -1,0 +1,96 @@
+/* Import a playful, rounded font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  background-color: #ffefd5; /* A light, warm peach color */
+  margin: 0;
+  font-family: 'Fredoka One', cursive;
+  color: #333;
+}
+
+/* Header styling with bright orange and playful text */
+header {
+  background-color: #ff4500;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-shadow: 2px 2px 0 #fff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area styling */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+main h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff4500;
+}
+
+/* Styling for the blog post list */
+#post-list {
+  list-style: none;
+  padding: 0;
+}
+
+#post-list li {
+  background-color: #fff;
+  border: 2px dashed #ff4500;
+  margin: 10px 0;
+  padding: 15px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#post-list li:hover {
+  background-color: #ffe4b5;
+  transform: scale(1.02);
+}
+
+#post-list li a {
+  font-size: 1.5rem;
+  color: #ff4500;
+  text-decoration: none;
+}
+
+#post-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling matching the header */
+footer {
+  background-color: #ff4500;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
